@@ -1,0 +1,93 @@
+﻿@model dreviny.Models.Drevina
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Drevina</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Strom" class="control-label"></label>
+                <input asp-for="Strom" class="form-control" />
+                <span asp-validation-for="Strom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vzrust" class="control-label"></label>
+                <input asp-for="Vzrust" class="form-control" />
+                <span asp-validation-for="Vzrust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vysadba" class="control-label"></label>
+                <input asp-for="Vysadba" class="form-control" />
+                <span asp-validation-for="Vysadba" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stanoviste" class="control-label"></label>
+                <input asp-for="Stanoviste" class="form-control" />
+                <span asp-validation-for="Stanoviste" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puda" class="control-label"></label>
+                <input asp-for="Puda" class="form-control" />
+                <span asp-validation-for="Puda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sprasnost" class="control-label"></label>
+                <input asp-for="Sprasnost" class="form-control" />
+                <span asp-validation-for="Sprasnost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odolnost" class="control-label"></label>
+                <input asp-for="Odolnost" class="form-control" />
+                <span asp-validation-for="Odolnost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rez" class="control-label"></label>
+                <input asp-for="Rez" class="form-control" />
+                <span asp-validation-for="Rez" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hnojeni" class="control-label"></label>
+                <input asp-for="Hnojeni" class="form-control" />
+                <span asp-validation-for="Hnojeni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kveteni" class="control-label"></label>
+                <input asp-for="Kveteni" class="form-control" />
+                <span asp-validation-for="Kveteni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sklizeň" class="control-label"></label>
+                <input asp-for="Sklizeň" class="form-control" />
+                <span asp-validation-for="Sklizeň" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zazimovani" class="control-label"></label>
+                <input asp-for="Zazimovani" class="form-control" />
+                <span asp-validation-for="Zazimovani" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ruzne" class="control-label"></label>
+                <input asp-for="Ruzne" class="form-control" />
+                <span asp-validation-for="Ruzne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

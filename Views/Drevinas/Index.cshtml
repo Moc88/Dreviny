@@ -1,0 +1,107 @@
+﻿@model IEnumerable<dreviny.Models.Drevina>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Strom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vzrust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vysadba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stanoviste)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sprasnost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odolnost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rez)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hnojeni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kveteni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sklizeň)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zazimovani)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ruzne)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vzrust)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vysadba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stanoviste)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sprasnost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odolnost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hnojeni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kveteni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sklizeň)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zazimovani)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ruzne)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
